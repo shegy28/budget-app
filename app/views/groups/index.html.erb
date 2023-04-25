@@ -1,0 +1,24 @@
+<h1>Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Icon</th>
+      <th>Total Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groups.each do |group| %>
+        <% if current_user.id == group.author_id %>
+            <tr>
+                <td><%= link_to group.name, user_group_path(group.author, group) %></td>
+                <td><%= image_tag group.icon %></td>
+                <td><%= group.expenses.sum(:amount) %></td>
+            </tr>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add a new category", new_user_group_path(@user) %>
