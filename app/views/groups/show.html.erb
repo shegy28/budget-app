@@ -1,0 +1,29 @@
+<h1><%= @group.name %></h1>
+
+<p>Icon: <%= @group.icon %></p>
+<p>Total Amount: <%= @group.expenses.sum(:amount) %></p>
+
+<h2>Transactions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @group.expenses.each do |expense| %>
+      <% if current_user.id == expense.author_id %>
+        <tr>
+            <td><%= expense.name %></td>
+            <td><%= expense.amount %></td>
+        </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add a new transaction", new_user_expense_path(@group.author) %>
+<%= link_to "Back to categories", root_path %>
+
