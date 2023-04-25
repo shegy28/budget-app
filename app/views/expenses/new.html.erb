@@ -23,14 +23,9 @@
   </div>
 
   <div class="field">
-  <%= form.label :group_ids, "Categories" %>
-  <%= form.collection_select :group_ids, @groups, :id, :name, {}, { multiple: true, class: "form-select" } %>
-  
-</div>
-
-
-
-
+    <%= form.label :group_ids, "Categories" %>
+    <%= form.collection_select :group_ids, @groups, :id, :name, {}, { multiple: true, class: "form-select" } %>
+  </div>
 
   <div class="actions">
     <%= form.submit "Save" %>

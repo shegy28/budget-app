@@ -8,13 +8,13 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     if @expense.save
-      redirect_to user_group_path(@expense.author_id, @expense.group_ids), notice: "Expense created successfully."
+      redirect_to user_group_path(@expense.author_id, @expense.group_ids), notice: 'Expense created successfully.'
     else
       @groups = current_user.groups
       render :new
     end
   end
- 
+
 
   private
 
@@ -22,4 +22,3 @@ class ExpensesController < ApplicationController
     params.require(:expense).permit(:name, :amount, group_ids: []).merge(author: current_user)
   end
 end
-
