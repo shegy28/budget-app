@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @groups = Group.all
+    @groups = Group.order(created_at: :desc).all
     @user = current_user
   end
 
@@ -16,7 +17,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     @group.author_id = current_user.id
     if @group.save
-      redirect_to root_path, notice: 'Group was successfully created.'
+      redirect_to authenticated_root_path, notice: 'Group was successfully created.'
     else
       render :new
     end
