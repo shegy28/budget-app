@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
-  get 'expenses/new'
+  get '/splash', to: 'splash#index'
+  
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root to: 'groups#index'
+  devise_scope :user do
+    authenticated :user do
+      root 'groups#index', as: :authenticated_root
+    end
+  
+    unauthenticated do
+      root "splash#index", as: :unauthenticated_root
+    end
+  end
   
   resources :users, only: [:index, :show, :new] do
     resources :groups, only: [:new, :create, :show, :index, :destroy]
