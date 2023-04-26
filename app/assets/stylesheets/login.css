@@ -1,0 +1,94 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.splash-logo {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.splash-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.splash-button {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.one {
+  background-color: transparent;
+  color: #000;
+}
+
+.splash-button:hover {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+/* login */
+
+.login-header {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: #3778c2;
+  font-weight: 500;
+  height: 50px;
+  align-items: center;
+  color: #fff;
+  padding: 20px 10px 5px 10px;
+  margin-bottom: 20px;
+}
+
+.direction a {
+  font-size: larger;
+  text-decoration: none;
+  color: #fff;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px;
+  border: rgb(210, 209, 209) 1px;
+  border-style: solid none solid none;
+  border-width: 1px;
+}
+
+.login input {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.field1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login-body {
+  margin-top: 20px;
+}
+
+.unhappy {
+  margin-top: 20px;
+}
