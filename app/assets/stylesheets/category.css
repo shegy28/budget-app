@@ -142,18 +142,25 @@ img {
 .create-category {
   padding: 10px;
   margin-top: 10px;
+  border: none;
+  margin: 50px 0 0 0;
 }
 
 .form-select {
   height: 50px;
-  margin: 10px 0;
+  width: 100%;
+  border:#bfbbbb;
+  padding-left: 4%;
 }
 
 .field-select {
   display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
 .field-select label {
   margin-top: 10px;
+  font-size: small;
+  margin: 5px 0 5px 4%;
 }

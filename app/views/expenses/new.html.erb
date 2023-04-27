@@ -51,8 +51,8 @@
     </div>
 
     <div class="field-select">
+      <%= form.label :group_ids, " Select atleast one Category:" %>
       <%= form.select :group_ids, options_from_collection_for_select(@groups, :id, :name), {}, { multiple: true, class: "form-select" } %>
-      <%= form.label :group_ids, " Select a Category" %>
     </div>
 
     <div class="actions">
