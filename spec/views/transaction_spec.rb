@@ -25,7 +25,6 @@ RSpec.describe 'Transactions page', type: :feature do
     @transaction.groups << @groceries
     @transaction.save
 
-
     visit new_user_expense_path(@category.author)
   end
 
