@@ -36,11 +36,11 @@
 
 ## video demo 🎥
 
-https://user-images.githubusercontent.com/97671133/234506964-443990ab-8222-44c9-9ff0-9d4f1ad26f27.mov
+https://www.loom.com/share/535c8c3f689a4c0b90b4553016c53001
 
 ## Render Deploy 🚀
 
-[Live demo here](https://budget-app-wtfx.onrender.com/)
+[Live demo here](https://moneywise-vzr4.onrender.com/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
