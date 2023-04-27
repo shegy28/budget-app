@@ -2,14 +2,12 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class = "login-header">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
       <div class = "direction" > 
         <%= link_to unauthenticated_root_path do %>
           <i class="material-icons">arrow_back</i>
         <% end %>
       </div>
-     <div>LOGIN</div>
+     <div class = "login-logo">MoneyWise</div>
 
      <div class="login">
       <%= f.submit "Log in" %>
@@ -23,6 +21,10 @@
 
     <div class="field">
       <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "splash-button create-category" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
