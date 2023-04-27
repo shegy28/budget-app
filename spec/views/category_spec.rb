@@ -2,14 +2,13 @@ require 'rails_helper'
 
 RSpec.describe 'groups page', type: :feature do
   before :each do
-    
     @user = User.create(
       name: 'John',
       email: 'john@example.com',
       password: 'password'
     )
 
-    
+
 
     visit new_user_session_path
     fill_in 'Email', with: @user.email

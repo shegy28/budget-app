@@ -141,16 +141,15 @@ img {
 
 .create-category {
   padding: 10px;
-  margin-top: 10px;
   border: none;
-  margin: 50px 0 0 0;
+  margin-top: 50px;
 }
 
 .form-select {
   height: 50px;
   width: 100%;
-  border:#bfbbbb;
-  padding-left: 4%;
+  border: #bfbbbb solid 1px;
+  padding: 2% 4%;
 }
 
 .field-select {
@@ -160,7 +159,6 @@ img {
 }
 
 .field-select label {
-  margin-top: 10px;
   font-size: small;
-  margin: 5px 0 5px 4%;
+  margin: 10px 0 5px 4%;
 }
